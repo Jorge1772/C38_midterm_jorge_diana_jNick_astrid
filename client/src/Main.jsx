@@ -9,7 +9,7 @@ const App = () => {
 
   const fetchDemoData = () => {
     fetch('/api/demo')
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => setServerMessage(data.message));
   };
 
