@@ -1,11 +1,9 @@
-/* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
 
-#demo {
-  width: 100vw;
-  height: 100vh;
+.carousel{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  margin: 2%;
+  
 }
 
-/* END DEMO */
+
