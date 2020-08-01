@@ -10,10 +10,6 @@ function Carousel () {
                 </div>
 
                 <div className="item">
-                <img src="https://images.unsplash.com/photo-1557495235-340eb888a9fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80" width="800px" alt="Sweet Lab and it's owner"></img>
-                </div>
-
-                <div className="item">
                 <img src="https://images.unsplash.com/photo-1532717681453-5fe8155b6cdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" width="800px" alt="sweet retriever"></img>
                 </div>
 
