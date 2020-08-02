@@ -1,30 +1,30 @@
-import React from "react";
-import {Container, Form, FormControl, InputGroup, Button } from 'react-bootstrap';
-import axios from 'axios';
+import React from 'react';
+import {
+  Container,
+  Form,
+  FormControl,
+  InputGroup,
+  Button
+} from 'react-bootstrap';
 
 class Search extends React.Component {
-  handleSubmit(event){
+  handleSubmit(event) {
     event.preventDefault();
+    const { history } = this.props;
     const city = event.target.elements[0].value;
-    
-    axios.get(`http://localhost:8080/api/places?query=${city}`)
-      .then((res) =>{
-        console.log(res.data.results)
-        this.props.data.push(res.data.results);
-        });
+
+    history.push(`/results/${city}`);
   }
-  render(){
-    return(
+  render() {
+    return (
       <Container>
         <Form onSubmit={(e) => this.handleSubmit(e)}>
           <Form.Group>
             <InputGroup className="city">
-              <FormControl
-                type="text"
-                placeholder="Search by city" />
-                <Button variant="primary" type="submit">
-                  Search
-                </Button>
+              <FormControl type="text" placeholder="Search by city" />
+              <Button variant="primary" type="submit">
+                Search
+              </Button>
             </InputGroup>
           </Form.Group>
         </Form>
@@ -33,9 +33,4 @@ class Search extends React.Component {
   }
 }
 
-
-
-
 export default Search;
-
-
