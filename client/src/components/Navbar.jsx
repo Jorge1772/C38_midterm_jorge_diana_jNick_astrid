@@ -24,7 +24,7 @@ class MyNavBar extends React.Component {
             Social Doggy Distancing
           </Navbar.Brand>
 
-          <NavLink className="nav-bar-item" href="faqs" to="faqs">
+          <NavLink className="nav-bar-item" href="/faqs">
             FAQs
           </NavLink>
         </Navbar>

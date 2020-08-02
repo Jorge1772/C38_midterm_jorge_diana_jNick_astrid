@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import City from './City';
 import Faq from './FaqPage';
+import HomeCarousel from './Carousel';
 import Footer from './Footer';
 import MyNavBar from './Navbar';
 import Search from './Search';
@@ -17,17 +18,18 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <MyNavBar />
-        <Route
-          exact
-          path="/"
-          component={(props) => <Search {...props} data={this.state.places} />}
-        />
-        <Route path="/faqs" component={Faq} />
-        <Route path="/results/:city" component={City} />
-        <Footer />
-      </Router>
+        <BrowserRouter>
+          <MyNavBar />
+          <Switch>
+            <Route exact path="/" component={(props) => <Search {...props} data={this.state.places} />} />
+            <Route exact path="/results/:city" component={City} />
+            <Route exact path="/faqs" component={Faq} />
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+
+
+      
     );
   }
 }
