@@ -8,7 +8,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <>
+    <div>
       <div>
         <Navbar1 />
       </div>
@@ -21,7 +21,7 @@ const App = () => {
       <div id="cards">
         <Cards />
       </div>
-    </>
+    </div>
   );
 };
 
