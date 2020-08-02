@@ -4,23 +4,22 @@ import Faq from './Faq';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Search from './Search';
-import Footer from './components/Footer';
-
+import Footer from './Footer';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       places: []
-    }
+    };
   }
-  
+
   render() {
     return (
       <React.Fragment>
         <MyNavBar />
         <Router>
-            <Route path="/faqs" component={Faq} />
+          <Route path="/faqs" component={Faq} />
         </Router>
         <Search data={this.state.places} />
         <Footer />
