@@ -4,6 +4,8 @@ import Faq from './Faq';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Search from './Search';
+import Footer from './components/Footer';
+
 
 class App extends Component {
   constructor(props){
@@ -21,6 +23,7 @@ class App extends Component {
             <Route path="/faqs" component={Faq} />
         </Router>
         <Search data={this.state.places} />
+        <Footer />
       </React.Fragment>
     );
   }
