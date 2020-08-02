@@ -16,12 +16,16 @@ app.get('/api', (request, response) => {
   });
 });
 
-app.get('/api/places', (req, res) =>{
+// example - /api/places?query=miami
+app.get('/api/places', (req, res) => {
   const city = req.query.query;
-  axios.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=dog%20park%20${city}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`)
-  .then((data) => {
-    res.send(data.data);
-  });
+  axios
+    .get(
+      `https://maps.googleapis.com/maps/api/place/textsearch/json?query=dog%20park%20${city}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`
+    )
+    .then((data) => {
+      res.send(data.data);
+    });
 });
 // END DEMO
 
