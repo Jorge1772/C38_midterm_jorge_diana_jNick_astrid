@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from './components/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar1 from './components/Navbar';
-import MainButtton from './components/Button';
+import Cards from './components/Cards';
 import InputBarA from './components/InputBar';
 import './App.css';
 
@@ -12,11 +12,38 @@ const App = () => {
       <div>
         <Navbar1 />
       </div>
-      <div>
+      <div id="#myCarousel">
         <Carousel />
       </div>
-      <InputBarA />
-      <MainButtton />
+      <div>
+        <InputBarA />
+      </div>
+      <div id="cards">
+        <div>
+          <Cards />
+        </div>
+        <div>
+          <Cards />
+        </div>
+        <div>
+          <Cards />
+        </div>
+        <div>
+          <Cards />
+        </div>
+        <div>
+          <Cards />
+        </div>
+        <div>
+          <Cards />
+        </div>
+        <div>
+          <Cards />
+        </div>
+        <div>
+          <Cards />
+        </div>
+      </div>
     </div>
   );
 };
