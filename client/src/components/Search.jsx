@@ -6,8 +6,10 @@ class Search extends React.Component {
   handleSubmit(event){
     event.preventDefault();
     const city = event.target.elements[0].value;
+    
     axios.get(`http://localhost:8080/api/places?query=${city}`)
       .then((res) =>{
+        console.log(res.data.results)
         this.props.data.push(res.data.results);
         });
   }

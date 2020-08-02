@@ -16,23 +16,23 @@ app.get('/api', (request, response) => {
   });
 });
 
-app.post('/api/places', (req, res) =>{
+app.get('/api/places', (req, res) =>{
   const city = req.query.query;
-  axios.get(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=dog%20park%20${city}&inputtype=textquery&key=AIzaSyA7_vTdRsFhmFaPDiooBZdDJ6MD-RjHwTM`)
+  axios.get(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=dog%20park%20${city}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`)
   .then((data) => {
     res.send(data.data);
   });
 });
 // END DEMO
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
-  // Handle React routing, return all requests to React app
-  app.get('*', (request, response) => {
-    response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
+// if (process.env.NODE_ENV === 'production') {
+//   // Serve any static files
+//   app.use(express.static(path.join(__dirname, 'client/build')));
+//   // Handle React routing, return all requests to React app
+//   app.get('*', (request, response) => {
+//     response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+//   });
+// }
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
