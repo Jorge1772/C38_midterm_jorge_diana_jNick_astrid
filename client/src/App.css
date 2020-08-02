@@ -1,0 +1,8 @@
+#myCarousel {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+#Nav {
+  color: lightslategrey;
+}
