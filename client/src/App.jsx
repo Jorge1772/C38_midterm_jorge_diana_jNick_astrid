@@ -18,11 +18,10 @@ const App = () => {
   useEffect(fetchDemoData, []);
 
   return (
-    <div className="carousel"><Carousel /></div>
+    <div className="carousel">
+      <Carousel />
+    </div>
   );
-
-
-  
 };
 
 export default App;
