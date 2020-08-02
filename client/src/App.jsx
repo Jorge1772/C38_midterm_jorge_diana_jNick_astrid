@@ -8,7 +8,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <div>
+    <>
       <div>
         <Navbar1 />
       </div>
@@ -19,32 +19,9 @@ const App = () => {
         <InputBarA />
       </div>
       <div id="cards">
-        <div>
-          <Cards />
-        </div>
-        <div>
-          <Cards />
-        </div>
-        <div>
-          <Cards />
-        </div>
-        <div>
-          <Cards />
-        </div>
-        <div>
-          <Cards />
-        </div>
-        <div>
-          <Cards />
-        </div>
-        <div>
-          <Cards />
-        </div>
-        <div>
-          <Cards />
-        </div>
+        <Cards />
       </div>
-    </div>
+    </>
   );
 };
 
