@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import MyNavBar from './Navbar';
-import  Faq from './Faq';
+import Faq from './Faq';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import Search from './Search';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      places: []
+    }
+  }
+  
   render() {
     return (
       <React.Fragment>
@@ -12,8 +20,10 @@ class App extends Component {
         <Router>
             <Route path="/faqs" component={Faq} />
         </Router>
+        <Search data={this.state.places} />
       </React.Fragment>
     );
   }
 }
+
 export default App;
