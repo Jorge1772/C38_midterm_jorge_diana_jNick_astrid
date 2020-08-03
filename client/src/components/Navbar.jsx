@@ -1,13 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Navbar, NavLink } from 'react-bootstrap';
-
 class MyNavBar extends React.Component {
   handleNavigation = () => {
     const { history } = this.props;
     history.push('/');
   };
-
   render() {
     return (
       <React.Fragment>
@@ -24,7 +22,6 @@ class MyNavBar extends React.Component {
             Social Doggy Distancing
           </Navbar.Brand>
 
-          <NavLink className="nav-bar-item" href="/faqs">
             FAQs
           </NavLink>
         </Navbar>
@@ -32,5 +29,4 @@ class MyNavBar extends React.Component {
     );
   }
 }
-
 export default withRouter(MyNavBar);

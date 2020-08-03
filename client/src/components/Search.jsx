@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Form,
@@ -8,11 +8,12 @@ import {
 } from 'react-bootstrap';
 import Carousel from './Carousel'
 
-class Search extends React.Component {
-  handleSubmit(event) {
+const Search = ({ history }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const { history } = this.props;
-    const city = event.target.elements[0].value;
+
 
     history.push(`/results/${city}`);
   }

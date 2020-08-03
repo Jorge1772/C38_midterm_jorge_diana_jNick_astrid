@@ -1,0 +1,16 @@
+#myCarousel {
+  justify-content: center;
+  margin: 2%;
+  width: 100%;
+}
+
+#Nav {
+  color: lightslategrey;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

@@ -17,13 +17,15 @@ app.get('/api', (request, response) => {
 });
 
 // example - /api/places?query=miami
-app.get('/api/places', (req, res) => {
-  const city = req.query.query;
+app.get('/api/places/:city', (req, res) => {
+  const { city } = req.params;
+  console.log(city);
   axios
     .get(
       `https://maps.googleapis.com/maps/api/place/textsearch/json?query=dog%20park%20${city}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`
     )
     .then((data) => {
+      console.log(data.data);
       res.send(data.data);
     });
 });
