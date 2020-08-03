@@ -26,7 +26,6 @@
 .main-footer{
   display: flex;
   background-color: black;
-  position: fixed;
   bottom: 0;
   width: 100%;
   padding-bottom:40px;
@@ -63,3 +62,4 @@
   font-size: 80%;
 
 }
+

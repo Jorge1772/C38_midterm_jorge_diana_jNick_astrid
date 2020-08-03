@@ -6,6 +6,7 @@ import {
   InputGroup,
   Button
 } from 'react-bootstrap';
+import Carousel from './Carousel'
 
 class Search extends React.Component {
   handleSubmit(event) {
@@ -17,8 +18,10 @@ class Search extends React.Component {
   }
   render() {
     return (
-      <Container>
-        <Form onSubmit={(e) => this.handleSubmit(e)}>
+
+      <Container className=" d-flex flex-column align-items-center">
+        <Carousel />
+        <Form onSubmit={(e) => this.handleSubmit(e)} style={{width:"50vw"}}>
           <Form.Group>
             <InputGroup className="city">
               <FormControl type="text" placeholder="Search by city" />
