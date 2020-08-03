@@ -3,11 +3,15 @@ body{
   
 }
 
+
 .nav-bar{
   font-family: 'Pacifico', cursive;
-  
+  background-color: #2B4150;
+  height: 60px;
+  font-size: 80%;
   
 }
+
 
 .nav-bar-item{
   margin-left: auto;
@@ -16,25 +20,8 @@ body{
   display: inline-block;
   line-height: inherit;
   color: #F6AE2D;
+  
 }
-
-
-.searchbar {
-  width: 50%;
-  height: auto;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.searchbar input {
-  margin: 30px 0;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New" ;
-}
-
-
-
 
 
 .main-footer{
@@ -75,5 +62,35 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 80%;
 
+}
+
+
+
+/* .searchbar-input {
+  margin: 30px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New" ;
+} */
+
+.search-bar{
+  background-color: #2B4150;
+  border-color: #2B4150;
+  padding-right: 50%;
+  color: white;
+}
+
+.search-button{
+  background-color: #D4520C;
+  border-color: #D4520C;
+}
+
+
+
+
+
+.faqPTags{
+  color: #93C3DC;
+  padding-bottom: 2%;
 }
 

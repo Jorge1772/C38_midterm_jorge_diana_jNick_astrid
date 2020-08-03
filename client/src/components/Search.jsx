@@ -24,8 +24,8 @@ class Search extends React.Component {
         <Form onSubmit={(e) => this.handleSubmit(e)} style={{width:"50vw"}}>
           <Form.Group>
             <InputGroup className="city">
-              <FormControl type="text" placeholder="Search by city" />
-              <Button variant="primary" type="submit">
+              <FormControl type="text" placeholder="Search by city" className="search-bar" />
+              <Button variant="primary" type="submit" className="search-button">
                 Search
               </Button>
             </InputGroup>
