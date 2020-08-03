@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import City from './City';
 import Faq from './FaqPage';
-import HomeCarousel from './Carousel';
 import Footer from './Footer';
 import MyNavBar from './Navbar';
 import Search from './Search';

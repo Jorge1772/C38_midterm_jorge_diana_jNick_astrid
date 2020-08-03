@@ -38,6 +38,7 @@ class City extends Component {
 
     axios.get(`/api/places?query=${city}`).then((res) => {
       this.setState({ parks: res.data.results });
+      
     });
   };
 
@@ -45,13 +46,18 @@ class City extends Component {
     const { parks } = this.state;
 
     return (
+      
       <div>
         <h1>THis is the city page</h1>
         {parks.map((park) => (
           <p key={park.place_id}>{park.name}</p>
         ))}
       </div>
+      
+      
     );
+
+    
   }
 }
 
