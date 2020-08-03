@@ -1,58 +1,34 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Cards from './Cards';
 
-// const City = ({ match }) => {
-//   const [parks, setParks] = useState([]);
+const City = ({ match }) => {
+  const [parks, setParks] = useState([]);
 
-//   const fetchParks = () => {
-//     const city = match.params.city;
-
-//     axios.get(`/api/places?query=${city}`).then((res) => {
-//       setParks(res.data.results);
-//     });
-//   };
-
-//   useEffect(() => {
-//     fetchParks();
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>THis is the city page</h1>
-//       {parks.map((park) => (
-//         <p key={park.place_id}>{park.name}</p>
-//       ))}
-//     </div>
-//   );
-// };
-
-class City extends Component {
-  state = { parks: [] };
-
-  componentDidMount() {
-    this.fetchParks();
-  }
-
-  fetchParks = () => {
-    const { city } = this.props.match.params;
-
-    axios.get(`/api/places?query=${city}`).then((res) => {
-      this.setState({ parks: res.data.results });
-    });
+  const fetchParks = async () => {
+    const city = match.params.city;
+    try {
+      const response = await axios.get(`/api/places/${city}`);
+      setParks(response.data.results);
+      console.log(response.data.results);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  render() {
-    const { parks } = this.state;
+  useEffect(() => {
+    fetchParks();
+  }, []);
 
-    return (
-      <div>
-        <h1>THis is the city page</h1>
-        {parks.map((park) => (
-          <p key={park.place_id}>{park.name}</p>
-        ))}
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <h1>THis is the city page</h1>
+      {parks.map((park) => (
+        <Cards data={park} />
+        // <p key={park.place_id}>{park.name}</p>
+      ))}
+    </div>
+  );
+};
 
 export default City;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Form,
@@ -7,30 +7,37 @@ import {
   Button
 } from 'react-bootstrap';
 
-class Search extends React.Component {
-  handleSubmit(event) {
-    event.preventDefault();
-    const { history } = this.props;
-    const city = event.target.elements[0].value;
+const Search = ({ history }) => {
+  const [searchTerm, setSearchTerm] = useState('');
 
-    history.push(`/results/${city}`);
-  }
-  render() {
-    return (
-      <Container>
-        <Form onSubmit={(e) => this.handleSubmit(e)}>
-          <Form.Group>
-            <InputGroup className="city">
-              <FormControl type="text" placeholder="Search by city" />
-              <Button variant="primary" type="submit">
-                Search
-              </Button>
-            </InputGroup>
-          </Form.Group>
-        </Form>
-      </Container>
-    );
-  }
-}
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    history.push(`/results/${searchTerm}`);
+  };
+
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  return (
+    <Container>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group>
+          <InputGroup className="city">
+            <FormControl
+              type="text"
+              placeholder="Search by city"
+              onChange={handleChange}
+            />
+            <Button variant="primary" type="submit">
+              Search
+            </Button>
+          </InputGroup>
+        </Form.Group>
+      </Form>
+    </Container>
+  );
+};
 
 export default Search;
