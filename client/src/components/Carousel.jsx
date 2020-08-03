@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'
 
 function HomeCarousel() {
   return (
-    <Carousel style={{width:700, height:500, padding:30}}>
+    <Carousel style={{width:750, padding:10}}>
   <Carousel.Item>
     <img
       className="d-block w-100"
