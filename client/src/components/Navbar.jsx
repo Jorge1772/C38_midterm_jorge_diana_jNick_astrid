@@ -9,19 +9,19 @@ class MyNavBar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar bg="light" variant="light">
+        <Navbar className="nav-bar">
           <Navbar.Brand href="">
             <img
               onClick={this.handleNavigation}
               alt=""
-              src="/doggylogo.png"
-              width="40"
-              height="40"
-              className="d-inline-block align-bottom"
+              src="/513_noShadow.png"
+              width="50"
+              height="50"
+              className="d-inline-block align-center"
             />{' '}
             Social Doggy Distancing
           </Navbar.Brand>
-          <NavLink className="nav-bar-item" href="faqs" to="faqs">
+
             FAQs
           </NavLink>
         </Navbar>

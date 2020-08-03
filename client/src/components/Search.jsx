@@ -6,6 +6,7 @@ import {
   InputGroup,
   Button
 } from 'react-bootstrap';
+import Carousel from './Carousel'
 
 const Search = ({ history }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,31 +14,27 @@ const Search = ({ history }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    history.push(`/results/${searchTerm}`);
-  };
 
-  const handleChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
+    history.push(`/results/${city}`);
+  }
+  render() {
+    return (
 
-  return (
-    <Container>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group>
-          <InputGroup className="city">
-            <FormControl
-              type="text"
-              placeholder="Search by city"
-              onChange={handleChange}
-            />
-            <Button variant="primary" type="submit">
-              Search
-            </Button>
-          </InputGroup>
-        </Form.Group>
-      </Form>
-    </Container>
-  );
-};
+      <Container className=" d-flex flex-column align-items-center">
+        <Carousel />
+        <Form onSubmit={(e) => this.handleSubmit(e)} style={{width:"50vw"}}>
+          <Form.Group>
+            <InputGroup className="city">
+              <FormControl type="text" placeholder="Search by city" />
+              <Button variant="primary" type="submit">
+                Search
+              </Button>
+            </InputGroup>
+          </Form.Group>
+        </Form>
+      </Container>
+    );
+  }
+}
 
 export default Search;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import City from './City';
 import Faq from './FaqPage';
 import Footer from './Footer';
@@ -17,13 +17,20 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <MyNavBar />
-        <Route exact path="/" component={Search} />
-        <Route path="/faqs" component={Faq} />
-        <Route path="/results/:city" component={City} />
-        <Footer />
-      </Router>
+
+
+        <BrowserRouter>
+          <MyNavBar />
+          <Switch>
+            <Route exact path="/" component={(props) => <Search {...props} data={this.state.places} />} />
+            <Route exact path="/results/:city" component={City} />
+            <Route exact path="/faqs" component={Faq} />
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+
+
+      
     );
   }
 }
