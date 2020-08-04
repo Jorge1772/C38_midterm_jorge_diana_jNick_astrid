@@ -23,7 +23,7 @@ const City = ({ match }) => {
 
   return (
     <div>
-      <h1>Here are your results... GO FETCH!!!</h1>
+      <h3 className="cityResults">Here are your results... Go fetch!</h3>
       <div id="cards">
         {parks.map((park) => (
           <Cards data={park} />

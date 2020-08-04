@@ -21,7 +21,7 @@ class MyNavBar extends React.Component {
               className="nav-logo-name"
               style={{ display: 'inline-block', alignItems: 'center' }}
             />{' '}
-            Social Doggy Distancing
+            Social Doggy
           </Navbar.Brand>
           <NavLink className="nav-bar-item" to="/faqs">
             FAQs
