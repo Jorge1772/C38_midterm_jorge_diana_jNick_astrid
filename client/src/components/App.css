@@ -1,70 +1,57 @@
-body{
-  background-color:#2F4858;
-  
+body {
+  background-color: #2f4858;
 }
 
-
-.nav-bar{
+.nav-bar {
   font-family: 'Pacifico', cursive;
-  background-color: #2B4150;
+  background-color: #2b4150;
   height: 60px;
   font-size: 80%;
-  
 }
 
-
-.nav-bar-item{
+.nav-bar-item {
   margin-left: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   display: inline-block;
   line-height: inherit;
-  color: #F6AE2D;
-  
+  color: #f6ae2d;
 }
 
-
-.main-footer{
+.main-footer {
   display: flex;
-  background-color: #2B4150;
+  background-color: #2b4150;
   bottom: 0;
   width: 100%;
-  padding-bottom:40px;
-  padding-top:40px;
-  
-  
-  
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
-.footer-left{
+.footer-left {
   margin-left: 5%;
-  color: #74B1D2;
+  color: #74b1d2;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 90%;
 }
 
-.footer-right{
+.footer-right {
   width: 17%;
   margin-left: 60%;
-  
 }
 
-.mission-head{
-  color: #74B1D2;
+.mission-head {
+  color: #74b1d2;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 90%;
 }
 
-.mission{
-  color: #74B1D2;
+.mission {
+  color: #74b1d2;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 80%;
-
 }
-
-
 
 /* .searchbar-input {
   margin: 30px 0;
@@ -73,24 +60,36 @@ body{
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New" ;
 } */
 
-.search-bar{
-  background-color: #2B4150;
-  border-color: #2B4150;
+.search-bar {
+  background-color: #2b4150;
+  border-color: #2b4150;
   padding-right: 50%;
   color: white;
 }
 
-.search-button{
-  background-color: #D4520C;
-  border-color: #D4520C;
+.search-button {
+  background-color: #d4520c;
+  border-color: #d4520c;
 }
 
-
-
-
-
-.faqPTags{
-  color: #93C3DC;
+.faqPTags {
+  color: #93c3dc;
   padding-bottom: 2%;
 }
 
+#myCarousel {
+  justify-content: center;
+  margin: 2%;
+  width: 100%;
+}
+
+#Nav {
+  color: lightslategrey;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

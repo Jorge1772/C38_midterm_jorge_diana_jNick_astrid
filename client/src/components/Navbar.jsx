@@ -1,11 +1,12 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import { Navbar, NavLink } from 'react-bootstrap';
+import { withRouter, NavLink } from 'react-router-dom';
+import { Navbar } from 'react-bootstrap';
 class MyNavBar extends React.Component {
   handleNavigation = () => {
     const { history } = this.props;
     history.push('/');
   };
+
   render() {
     return (
       <React.Fragment>
@@ -16,13 +17,13 @@ class MyNavBar extends React.Component {
               alt=""
               src="/513_noShadow.png"
               width="50"
-              height="50"   
+              height="50"
               className="nav-logo-name"
-              style={{display:"inline-block", alignItems:"center"}}
+              style={{ display: 'inline-block', alignItems: 'center' }}
             />{' '}
             Social Doggy Distancing
           </Navbar.Brand>
-
+          <NavLink className="nav-bar-item" to="/faqs">
             FAQs
           </NavLink>
         </Navbar>
