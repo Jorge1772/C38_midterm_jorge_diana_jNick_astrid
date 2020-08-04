@@ -6,7 +6,8 @@ body {
   font-family: 'Pacifico', cursive;
   background-color: #cbf3f0;
   height: 60px;
-  font-size: 80%;
+  
+  
 }
 
 .nav-bar-item {
@@ -15,7 +16,9 @@ body {
   font-weight: 400;
   display: inline-block;
   line-height: inherit;
-  color: #f6ae2d;
+  color: #2BB6A8;
+  margin-right: 2%;
+  font-size: 100%;
 }
 
 .main-footer {
@@ -30,7 +33,7 @@ body {
 }
 .footer-left {
   margin-left: 5%;
-  color: #ffbf69;
+  color: #FFD399;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 90%;
@@ -42,14 +45,14 @@ body {
 }
 
 .mission-head {
-  color: #ffbf69;
+  color: #FFD399;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 90%;
 }
 
 .mission {
-  color: #ffbf69;
+  color: #FFD399;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 80%;
 }
@@ -69,8 +72,8 @@ body {
 }
 
 .search-button {
-  background-color: #d4520c;
-  border-color: #d4520c;
+  background-color: #2FC6B7;
+  border-color: #2FC6B7;
 }
 
 .faqPTags {
@@ -103,4 +106,9 @@ body {
   box-shadow: 2px 4px 4px lightslategrey;
   margin: 20px;
   height: 400px;
+}
+
+.cityResults{
+  margin-left: 2%;
+  padding-top: 1.5%;
 }
