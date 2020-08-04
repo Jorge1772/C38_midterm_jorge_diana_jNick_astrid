@@ -17,8 +17,6 @@ const Cards = ({ data }) => {
             ? 'Open Now'
             : 'Closed Now'}
         </ListGroupItem>
-        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
       </ListGroup>
     </Card>
   );
