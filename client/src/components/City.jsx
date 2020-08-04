@@ -19,11 +19,11 @@ const City = ({ match }) => {
 
   useEffect(() => {
     fetchParks();
-  }, []);
+  });
 
   return (
     <div>
-      <h1>This is the city page</h1>
+      <h1>Here are your results... GO FETCH!!!</h1>
       <div id="cards">
         {parks.map((park) => (
           <Cards data={park} />
@@ -32,5 +32,4 @@ const City = ({ match }) => {
     </div>
   );
 };
-
 export default City;

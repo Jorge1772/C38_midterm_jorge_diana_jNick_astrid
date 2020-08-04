@@ -17,20 +17,21 @@ class App extends Component {
 
   render() {
     return (
-
-
-        <BrowserRouter>
-          <MyNavBar />
-          <Switch>
-            <Route exact path="/" component={(props) => <Search {...props} data={this.state.places} />} />
-            <Route exact path="/results/:city" component={City} />
-            <Route exact path="/faqs" component={Faq} />
-          </Switch>
-          <Footer />
-        </BrowserRouter>
-
-
-      
+      <BrowserRouter>
+        <MyNavBar />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={(props) => (
+              <Search {...props} data={this.state.places} />
+            )}
+          />
+          <Route exact path="/results/:city" component={City} />
+          <Route exact path="/faqs" component={Faq} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     );
   }
 }
