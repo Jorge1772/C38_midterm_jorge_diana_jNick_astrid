@@ -6,7 +6,7 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem';
 const Cards = ({ data }) => {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" />
+      <Card.Img variant="top" src={data.imgUrl} />
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
         <Card.Text>{data.formatted_address}</Card.Text>

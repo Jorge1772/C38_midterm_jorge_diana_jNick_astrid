@@ -8,6 +8,8 @@ const app = express();
 const cors = require('cors');
 const axios = require('axios');
 
+const BASE_URL = 'https://maps.googleapis.com/maps/api/place';
+
 app.use(cors());
 // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
 app.get('/api', (request, response) => {
@@ -19,19 +21,22 @@ app.get('/api', (request, response) => {
 // example - /api/places?query=miami
 app.get('/api/places/:city', (req, res) => {
   const { city } = req.params;
-  console.log(city);
   axios
     .get(
-      `https://maps.googleapis.com/maps/api/place/textsearch/json?query=dog%20park%20${city}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`
+      `${BASE_URL}/textsearch/json?query=dog%20park%20${city}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`
     )
     .then((data) => {
-      console.log(data.data);
-      res.send(data.data);
+      const parsedResults = data.data.results.map((park) => ({
+        ...park,
+        imgUrl: `${BASE_URL}/photo?maxwidth=400&photoreference=${park.photos[0].photo_reference}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`
+      }));
+      res.send({ results: parsedResults });
     });
 });
+
 // END DEMO
 
-if (process.env.NODE_ENV === 'production') {
+https: if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
   // Handle React routing, return all requests to React app
