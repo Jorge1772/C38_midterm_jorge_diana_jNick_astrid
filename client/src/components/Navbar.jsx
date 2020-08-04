@@ -16,8 +16,9 @@ class MyNavBar extends React.Component {
               alt=""
               src="/513_noShadow.png"
               width="50"
-              height="50"
-              className="d-inline-block align-center"
+              height="50"   
+              className="nav-logo-name"
+              style={{display:"inline-block", alignItems:"center"}}
             />{' '}
             Social Doggy Distancing
           </Navbar.Brand>
