@@ -1,13 +1,19 @@
+@font-face{
+  font-family: Pacifico-Regular;
+  src: url('../fonts/Pacifico-Regular.ttf')
+}
+
 body {
   background-color: #ffffff;
 }
 
 .nav-bar {
-  font-family: 'Pacifico', cursive;
+  font-family: Pacifico-Regular !important;
   background-color: #cbf3f0;
   height: 60px;
-  
-  
+}
+.navbar-light .navbar-brand {
+  color: white;
 }
 
 .nav-bar-item {

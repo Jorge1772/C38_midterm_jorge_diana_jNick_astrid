@@ -19,7 +19,7 @@ const City = ({ match }) => {
 
   useEffect(() => {
     fetchParks();
-  });
+  }, []);
 
   return (
     <div>
