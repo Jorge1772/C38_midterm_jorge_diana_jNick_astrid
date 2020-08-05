@@ -8,6 +8,9 @@ import {
 } from 'react-bootstrap';
 import Carousel from './Carousel';
 
+
+//setting up or search form and setting the user input with useState
+
 const Search = ({ history }) => {
   const [searchTerm, setSearchTerm] = useState('');
 

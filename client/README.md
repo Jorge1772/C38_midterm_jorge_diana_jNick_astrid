@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Social Doggy Distance
 
-## Available Scripts
+We are an easy to manage way to search for local dog parks with just one click, the site will also link to a series of FAQ’s explaining the risks of COVID-19 to pets and humans.
 
-In the project directory, you can run:
+Status
+Although it is a fully fledged project, there are always improvements to be done to Social Doggy Distance. In the future we would like to add geo-tracking to display the number of active people in each park.
 
-### `npm start`
+Social Doggy Distance was created to help people and dogs in isolation find a local park where they can burn energy while still maintaining safe social distance.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ADJJ development team is:
+Astrid Massuh: I plan to keep learning and improve my skills in javascript to become a successful freelance web developer in the future.
+Diana Canelon: I used to design and personalize cute and educational gifts for kids. Now I am working on becoming the best Web Developer I can be.
+Jorge Silva: USN veteran, coming from a heavy mechanical background excited to continue my journey in the tec world
+J Nicolas Perez: Former sales manager for a massive hotel company, got tired of being one of a million, now dedicating to solve the world’s problems one function at a time.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Dependencies
+/node_modules
+client/node_modules
+/.pnp
+client/.pnp
+.pnp.js
+client/.pnp.js
+Places API
+Geocoding API
+Map JavaScript API
 
-### `npm test`
+Install
+`git clone` this repo
+`cd` into it.
+`yarn install`
+`cd client && yarn install`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Available build commands
+`yarn dev`: Runs BOTH your Express.JS and React developer environment locally at the same time. Any logs coming from Express will be prefaced with `[0]`, any logs from `create-react-app` will be prefaced with `[1]`.
+’yarn server`: Runs JUST your Express.JS server.
+`yarn client`: Runs JUST your front-end React app.
+Open [http://localhost:3000](http://localhost:3000) to view your local React app in the browser. The page will reload if you make edits.
+A .env file has been created to secure the  NODE_ENV_GOOGLE_MAPS_API_KEY=
+Key will also be secured in Heroku for deployment.
 
-### `npm run build`
+**Don’t forget to check your Google Billing**
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+THANK YOU FOR USING AND COLLABORATING TO SOCIAL DOGGY DISTANCING
