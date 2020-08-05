@@ -15,6 +15,9 @@ class App extends Component {
     };
   }
 
+  //setting up our routes so our app knows what to show and when to show it
+
+
   render() {
     return (
       <BrowserRouter>
