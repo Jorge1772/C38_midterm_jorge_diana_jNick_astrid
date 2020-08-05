@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Footer from './Footer';
 import Cards from './Cards';
 
 const City = ({ match }) => {
@@ -28,6 +28,7 @@ const City = ({ match }) => {
         {parks.map((park, i) => (
           <Cards key={i} data={park} />
         ))}
+        <Footer />
       </div>
     </div>
   );
