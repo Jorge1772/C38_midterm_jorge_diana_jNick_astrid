@@ -5,18 +5,17 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const path = require('path');
 const app = express();
-const cors = require('cors');
 const axios = require('axios');
 
 const BASE_URL = 'https://maps.googleapis.com/maps/api/place';
 
-app.use(cors());
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api', (request, response) => {
-  response.json({
-    message: 'Hello from server.js'
-  });
-});
+
+//axios is calling to the server, then that calls google places API, then pre-appends dog park which then adds the city typed into the search bar. 
+//this all make the API call to google which returns the array of objects, which allows us to pull and print the data we need.
+
+//pulling the image of each park: we were able to do this by calling the API and 
+//telling the computer that for each park result, we want it to formulate the imgUrl with the ${BASE_URL}, the desired width, and the 
+//photo reference key which we selected from the array of objects
 
 // example - /api/places?query=miami
 app.get('/api/places/:city', (req, res) => {
@@ -34,7 +33,7 @@ app.get('/api/places/:city', (req, res) => {
     });
 });
 
-// END DEMO
+
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files

@@ -1,67 +1,49 @@
-# Node / Create-React-App mashup
+Social Doggy Distance
 
-Read the instructions thoroughly before starting your project.
+We are an easy to manage way to search for local dog parks with just one click, the site will also link to a series of FAQ’s explaining the risks of COVID-19 to pets and humans.
 
-## Setup
+Although it is a fully fledged project, there are always improvements to be done to Social Doggy Distance. In the future we would like to add geo-tracking to display the number of active people in each park.
 
-- `git clone` this repo
-- `cd` into it.
-- `yarn install`
-- `cd client && yarn install`
+Social Doggy Distance was created to help people and dogs in isolation find a local park where they can burn energy while still maintaining safe social distance.
 
-## Available build commands
+ADJJ development team is:
 
-- `yarn dev`: Runs BOTH your Express.JS and React developer environment locally at the same time. Any logs coming from Express will be prefaced with `[0]`, any logs from `create-react-app` will be prefaced with `[1]`.
-- `yarn server`: Runs JUST your Express.JS server.
-- `yarn client`: Runs JUST your front-end React app.
+Astrid Massuh: I plan to keep learning and improve my skills in javascript to become a successful freelance web developer in the future.
 
-Open [http://localhost:3000](http://localhost:3000) to view your local React app in the browser. The page will reload if you make edits.
+Diana Canelon: I used to design and personalize cute and educational gifts for kids. Now I am working on becoming the best Web Developer I can be.
 
-## To deploy
+Jorge Silva: USN veteran, coming from a heavy mechanical background excited to continue my journey in the tec world
 
-NOTE: Heroku specifically runs `npm start`, so don't remove that from your package.json file.
+J Nicolas Perez: Former sales manager for a massive hotel company, got tired of being one of a million, now dedicating to solve the world’s problems one function at a time.
 
-- `heroku create your-app-name`
-- `git push heroku master`
+Dependencies
+/node_modules
+client/node_modules
+/.pnp
+client/.pnp
+.pnp.js
+client/.pnp.js
+Places API
+Geocoding API
+Map JavaScript API
 
-## Project Requirements
+Install
+`git clone` this repo
+`cd` into it.
+`yarn install`
+`cd client && yarn install`
 
-- [ ] Your project should pull data from an API. There are lots of options [here](https://github.com/toddmotto/public-apis) and [here](https://market.mashape.com/).
-  - Avoid any APIs that require OAuth (we'll talk about that later).
-  - Many APIs require an API key. Just sign up for an account and attach the key to your URL. Please make sure not to share your secret keys in a public GitHub repo.
-  - Some APIs don't allow _Cross-Origin Resource Sharing_ (CORS), meaning you can't make AJAX requests to them. You can get around this by proxying your requests with your Express server.
-- [ ] Your project should render a list of data from the API.
-  - [ ] Your project should allow the list to be filtered or searched.
-- [ ] Your project should show details about a single resource when clicked.
-- [ ] Your project should look (really) pretty!
-- [ ] You and your team should employ good Git and GitHub collaboration practices.
-- [ ] Your project must have a README.md file explaining what the project does and why it matters. [Here's an example](https://github.com/codeforamerica/howto/blob/master/Good-READMEs.md) of a great README.md template.
+Available build commands
+`yarn dev`: Runs BOTH your Express.JS and React developer environment locally at the same time. Any logs coming from Express will be prefaced with `[0]`, any logs from `create-react-app` will be prefaced with `[1]`.
+’yarn server`: Runs JUST your Express.JS server.
+`yarn client`: Runs JUST your front-end React app.
 
-| Rubric Criterion                                                                         | Points |
-| ---------------------------------------------------------------------------------------- | ------ |
-| Ability to search or filter, use of React Router                                         | 10     |
-| Code formatting and quality: indentation, variable and file naming conventions, etc.     | 10     |
-| No unused variables or imports, compiler errors                                          | 10     |
-| Use of class components when state is needed and functional components when state is not | 10     |
-| Proper use of environment variables for API keys or CORS proxy if needed                 | 10     |
-| Overall look and feel of application, well organized CSS files                           | 10     |
-| Well written documentation                                                               | 10     |
-| Use of GitHub issues, branches and commit messages                                       | 10     |
-| Look and feel of demo slide deck                                                         | 10     |
-| Ability to explain code decisions in demo                                                | 10     |
-| Ability to defend code decisions in response to panel questions                          | 10     |
+Open [http://localhost:3000] to view your local React app in the browser. The page will reload if you make edits.
 
-## Bonus
+A .env file has been created to secure the  NODE_ENV_GOOGLE_MAPS_API_KEY=
 
-- Fanciful animations and transitions
-- Incorporate multiple APIs into a single app
+Key will also be secured in Heroku for deployment.
 
-## Demo Requirements
+**Don’t forget to check your Google Billing**
 
-Create a slide deck for the technical panel. (Here's an [example](https://docs.google.com/presentation/d/15rfR-S5qAlzx4rHwBp_kJOlu0nQ7hcZOruTwbH6zRvQ/edit?usp=sharing).)
-
-- It should focus on _how_ you built the app.
-- Include code snippets with brief explanations. Or, specific references to the location of the code in your GitHub repo.
-- It should emphasize your technical setbacks and solutions.
-- Get straight to the point.
-- Be prepared to answer questions.
+THANK YOU FOR USING AND COLLABORATING TO SOCIAL DOGGY DISTANCING

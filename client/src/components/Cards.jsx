@@ -17,6 +17,9 @@ const Cards = ({ data }) => {
             ? 'Open Now'
             : 'Closed Now'}
         </ListGroupItem>
+        <ListGroupItem>
+          Rating: {data.rating} ⭐
+        </ListGroupItem>
       </ListGroup>
     </Card>
   );
