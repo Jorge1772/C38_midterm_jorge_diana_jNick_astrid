@@ -21,16 +21,23 @@ app.get('/api', (request, response) => {
 // example - /api/places?query=miami
 app.get('/api/places/:city', (req, res) => {
   const { city } = req.params;
+  const googlePayload = [];
   axios
     .get(
       `${BASE_URL}/textsearch/json?query=dog%20park%20${city}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`
     )
     .then((data) => {
-      const parsedResults = data.data.results.map((park) => ({
+      for(let n =0; n < 10; n++){
+        googlePayload.push(data.data.results[n]);
+      }
+      const parsedResults = googlePayload.map((park) => ({
         ...park,
         imgUrl: `${BASE_URL}/photo?maxwidth=400&photoreference=${park.photos[0].photo_reference}&key=${process.env.NODE_ENV_GOOGLE_MAPS_API_KEY}`
       }));
       res.send({ results: parsedResults });
+    })
+    .catch((error) => {
+      console.log(error);
     });
 });
 
