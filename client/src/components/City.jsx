@@ -25,8 +25,8 @@ const City = ({ match }) => {
     <div>
       <h3 className="cityResults">Here are your results... Go fetch!</h3>
       <div id="cards">
-        {parks.map((park) => (
-          <Cards data={park} />
+        {parks.map((park, i) => (
+          <Cards key={i} data={park} />
         ))}
       </div>
     </div>
